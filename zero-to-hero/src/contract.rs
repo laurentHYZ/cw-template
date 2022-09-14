@@ -19,7 +19,7 @@ pub fn instantiate(
     _msg: InstantiateMsg,
 ) -> Result<Response, ContractError> {
     set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION);
-    
+    _env
 }
 
 #[cfg_attr(not(feature = "library"), entry_point)]
