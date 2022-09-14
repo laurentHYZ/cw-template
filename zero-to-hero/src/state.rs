@@ -4,8 +4,8 @@ use serde::{Deserialize, Serialize};
 use cw_storage_plus::Item;
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
-pub struct State {
-    pub admin_address: Addr, //ex juno5678
+pub struct Config {
+    pub admin_address: cosmwasm_std::Addr, //ex juno5678
 }
 
-pub const CONFIG: Item<State> = Item::new("state");
+pub const CONFIG: Item<Config> = Item::new("state");
